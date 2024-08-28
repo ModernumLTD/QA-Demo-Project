@@ -28,3 +28,8 @@ jobs:
           private_key: ${{secrets.SSH_PRIVATE_KEY}}
           command: |
               /home/kate/git/QA-Demo-Project/server_scripts/run_tests.sh -e "${{ github.event.inputs.environment }}" > /var/log/QA-Demo-Project.log 2>&1
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
