@@ -14,6 +14,9 @@ on:
         options:
           - PRODUCTION
           - STAGE
+concurrency:
+  group: ModernumQADemoProjectGroup
+  cancel-in-progress: false
 
 jobs:
   deploy:
